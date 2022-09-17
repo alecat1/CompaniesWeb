@@ -1,0 +1,37 @@
+<div class ="maestro-companies-main-div">
+    <div class="maestro-companies-title">
+        <h1>Companies</h1>
+    </div>
+    <div class="maestro-companies-table-div">
+        <table id="sortTable" class="table table-striped table-bordered">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Identification Number</th>
+                <th scope="col">Expiration Date</th>
+                <th scope="col">Contact Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">IP Address</th>
+                <th scope="col">Image</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let companie of companies; let i = index">
+                <th scope="row" id="{{ 'companieId' +i}}">{{companie.data.data.entityId}}</th>
+                <th scope="row" id="{{ 'companieName' +i}}">{{companie.data.data.name}}</th>
+                <th scope="row" id="{{ 'companieIdNumber' +i}}">{{companie.data.data.identificationNumber}}</th>
+                <th scope="row" id="{{ 'companieExpDate' +i}}">{{companie.data.data.expirationDate}}</th>
+                <th scope="row" id="{{ 'companieContactName' +i}}">{{companie.data.data.contactName}}</th>
+                <th scope="row" id="{{ 'companieContactEmail' +i}}">{{companie.data.data.contactMail}}</th>
+                <th scope="row" id="{{ 'companieIpAddress' +i}}">{{companie.data.data.ipAddress}}</th>
+                <th scope="row" id="{{ 'companieLogo' +i}}">{{companie.data.data.logo}}</th>
+                <td><button type="button" class="btn btn-primary btn-lg" id="btn-edit-companie" (click)="editProduct(i,companie.data)">Editar</button></td>
+                <td><button type="button" class="btn btn-primary btn-lg" id="btn-delete-companie" (click)="deleteFieldValue(i)">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

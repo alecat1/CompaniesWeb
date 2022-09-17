@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateProduct } from '../create-product/create-product.component'
+import { MaestroCompanies } from '../maestro-companies/maestro-companies.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
-  {path:'create', component:CreateProduct},
+  {path:'companies', component:MaestroCompanies},
 ];
 
 @NgModule({

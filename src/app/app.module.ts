@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaestroProductos } from '../maestro-productos/maestro-productos.component';
-import { EditProduct } from '../edit-product/edit-product.component';
-import { CreateProduct } from '../create-product/create-product.component';
+import { MaestroCompanies } from '../maestro-companies/maestro-companies.component';
+import { EditCompanie } from '../edit-companie/edit-companie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainListComponent } from '../main-list/main-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaestroProductos,
-    CreateProduct,
-    EditProduct
+    MaestroCompanies,
+    EditCompanie,
+    MainListComponent
   ],
   imports: [
     HttpClientModule,
@@ -22,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [MaestroProductos, EditProduct],
+  providers: [MaestroCompanies, EditCompanie, MainListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

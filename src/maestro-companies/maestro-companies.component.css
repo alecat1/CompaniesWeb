@@ -1,0 +1,15 @@
+.maestro-companies-table-div{
+    width: 70%;
+    margin-top: 1rem;
+}
+.maestro-companies-main-div{
+    margin-left: 5rem;
+}
+.maestro-companies-title{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+#btn-delete-companie{
+    background-color: red;
+    border-color: red;
+}

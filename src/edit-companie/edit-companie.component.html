@@ -1,0 +1,50 @@
+
+  <!-- Modal -->
+  <div class="modal" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Companie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="form-edit-companie" [formGroup] = "companieform" (ngSubmit)="setEntity(companieform.value)">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" placeholder="Name" id="companieName" formControlName="companieName">
+                </div>
+                <div class="form-group">
+                    <label>Identification Number:</label>
+                    <input type="text" class="form-control" placeholder="ID number" id="companieIdNumber" formControlName="companieIdNumber">
+                </div>
+                <div class="form-group">
+                    <label>Expiration Date:</label>
+                    <input type="text" class="form-control" placeholder="Expiration date" id="companieExpDate" formControlName="companieExpDate">
+                </div>
+                <div class="form-group">
+                    <label>Contact Name:</label>
+                    <input type="text" class="form-control" placeholder="Contact name" id="companieContactName" formControlName="companieContactName">
+                </div>
+                <div class="form-group">
+                  <label>Email:</label>
+                  <input type="text" class="form-control" placeholder="Email" id="companieContactEmail" formControlName="companieContactEmail">
+                </div>
+                <div class="form-group">
+                  <label>IP Address:</label>
+                  <input type="text" class="form-control" placeholder="IP Address" id="companieIpAddress" formControlName="companieIpAddress">
+                </div>
+                <div class="form-group">
+                  <label>Image:</label>
+                  <input type="text" class="form-control" placeholder="Image" id="companieLogo" formControlName="companieLogo">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" id="save-btn" form="form-edit-companie" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

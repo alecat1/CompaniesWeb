@@ -1,4 +1,3 @@
 <router-outlet></router-outlet>
-<maestro-productos></maestro-productos>
-<create-product></create-product>
-<edit-product></edit-product>
+<app-main-list *ngIf="!hasRoute('companies')"></app-main-list>
+<edit-companie></edit-companie>

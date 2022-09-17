@@ -1,0 +1,24 @@
+<div class ="maestro-productos-main-div">
+    <div class="maestro-productos-title">
+        <h1>Companies list</h1>
+    </div>
+    <h4>Select one or more companies:</h4>
+    <div class="maestro-productos-table-div">
+        <table class="table">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Select</th>
+                <th scope="col">Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let companie of companies">
+                <td><input (change)="getCheckboxId($event)" [id]="companie.data.data.entityId" type="checkbox"/></td>
+                <th scope="row">{{companie.data.data.name}}</th>
+            </tr>
+            <maestro-companies *ngIf="load"></maestro-companies>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg" id="btn-show-companie" (click)="router.navigate(['/companies'],navigationExtras)">Show</button>
+    </div>
+</div>
